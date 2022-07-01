@@ -6,12 +6,12 @@ Created on Fri Jul  1 00:39:51 2022
 """
 
 import streamlit as st
-import dill as pickle
+import joblib
 import numpy as np
 
 def main():
     with open('model.pkl', 'rb') as model_file:
-        model = pickle.load(model_file)
+        model = joblib.load(model_file)
     
     st.title('Belajar front end prediction')
     st.subheader('Silahkan masukan variable')
